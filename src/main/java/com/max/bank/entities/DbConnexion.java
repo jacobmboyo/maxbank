@@ -13,7 +13,7 @@ public class DbConnexion {
 	String mdp = "jacobmboyo@gmail.com";
 	Connection strCon;
 	
-	public void insertClient(String nom, String prenom, String dateNaissance){
+	public void insertClient(Client cl){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
@@ -22,7 +22,7 @@ public class DbConnexion {
 			Statement st = strCon.createStatement();
 			
 			String sql = "insert into client(id, nom, prenom, dateNaissance) " +
-					"values(null, '" + nom + "', '" + prenom + "', '" + dateNaissance + "')";
+					"values(null, '" + cl.getNom() + "', '" + cl.getPrenom() + "', '" + cl.getDateNaissance() + "')";
 			st.executeUpdate(sql);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

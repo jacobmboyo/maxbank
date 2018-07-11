@@ -1,10 +1,12 @@
 package com.max.bank.entities;
 
+import org.joda.time.DateTime;
+
 public class Client {
 	private int id;
 	private String nom;
 	private String prenom;
-	private String dateNaissance;
+	private DateTime dateNaissance;
 	
 	// Getters and Setters
 	
@@ -26,11 +28,17 @@ public class Client {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public String getDateNaissance() {
+	public DateTime getDateNaissance() {
 		return dateNaissance;
 	}
-	public void setDateNaissance(String dateNaissance) {
+	public void setDateNaissance(DateTime dateNaissance) {
 		this.dateNaissance = dateNaissance;
+	}
+	
+	//
+	@Override
+	public String toString() {
+		return "Client [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", dateNaissance=" + dateNaissance + "]";
 	}
 	
 	
