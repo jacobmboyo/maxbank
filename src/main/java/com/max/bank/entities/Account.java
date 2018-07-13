@@ -11,7 +11,7 @@ public class Account {
 	public int getNumAccount() {
 		return numAccount;
 	}
-	public void setNumAccount(int numAccount) {
+		public void setNumAccount(int numAccount) {
 		this.numAccount = numAccount;
 	}
 	public String getTypeAccount() {
